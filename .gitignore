@@ -1,24 +1,125 @@
-# Compiled class file
-*.class
+public class Estudiante {
+    private String nombre;
+    private String paterno;
+    private String materno;
+    private String licenciatura;
+    private int matricula;
+    private float promedio;
 
-# Log file
-*.log
+    public Estudiante(String nombre, String paterno, String materno, String licenciatura, int matricula, double promedio) {
+        if (nombre.isEmpty()){
+        System.out.println("Error: el nombre no debe estar vacio");
+        } else {
+        this.nombre = nombre;
+        }
+        
+        if (paterno.isEmpty()){
+        System.out.println("Error: el apellido paterno no debe estar vacio");
+        } else {
+        this.paterno = paterno;
+        }
+        
+        if (materno.isEmpty()){
+        System.out.println("Error: el apellido materno no debe estar vacio");
+        } else {
+        this.materno = materno;
+        }
+        
+        if (licenciatura.isEmpty()){
+        System.out.println("Error: la licenciatura no debe estar vacio");
+        } else {
+        this.licenciatura = licenciatura;
+        }
+if (matricula >= 0 && matricula <= 10){
+            this.matricula = matricula;
+            System.out.println("Error: debe ser un valor entre 0 y 10");
+        }
+        
+        if (promedio >= 0 && promedio <= 10){
+            this.promedio = (float) promedio;
+        } else { 
+            System.out.println("Error: debe ser un valor entre 0 y 10");
+        }
+    }
 
-# BlueJ files
-*.ctxt
+    public String getNombre() {
+        return nombre;
+    }
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+    public void setNombre(String nombre) {
+        if (nombre.isEmpty()){
+        System.out.println("Error: el nombre no debe estar vacio");
+        } else {
+        this.nombre = nombre;
+        }
+    }
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+    public String getPaterno() {
+        return paterno;
+    }
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+    public void setPaterno(String paterno) {
+        if (paterno.isEmpty()){
+        System.out.println("Error: el apellido paterno no debe estar vacio");
+        } else {
+        this.paterno = paterno;
+        }
+  }
+
+    public String getMaterno() {
+        return materno;
+    }
+
+    public void setMaterno(String materno) {
+        if (materno.isEmpty()){
+        System.out.println("Error: el apellido materno no debe estar vacio");
+        } else {
+        this.materno = materno;
+        }
+    }
+
+    public String getLicenciatura() {
+        return licenciatura;
+    }
+
+    public void setLicenciatura(String licenciatura) {
+        if (licenciatura.isEmpty()){
+        System.out.println("Error: la licenciatura no debe estar vacio");
+        } else {
+        this.licenciatura = licenciatura;
+        }
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        if (matricula >= 0 && matricula <= 10){
+            this.matricula = matricula;
+            System.out.println("Error: debe ser un valor entre 0 y 10");
+        }
+  }
+
+    public float getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(float promedio) {
+        if (promedio >= 0 && promedio <= 10){
+            this.promedio = promedio;
+        } else { 
+            System.out.println("Error: debe ser un valor entre 0 y 10");
+        }
+    }
+
+    public Estudiante(String nombre, String paterno, String materno) {
+        this.nombre = nombre;
+        this.paterno = paterno;
+        this.materno = materno;
+    }
+
+    public Estudiante() {
+    }
+   
+}
